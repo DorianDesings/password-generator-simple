@@ -18,19 +18,29 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
+  min-height: 100vh;
   color: var(--text-color);
   background-color: var(--body-bg-color);
   font-family: 'DM Mono', monospace;
-  font-size: 14px;
 }
 
 .password-generator {
   padding: 2.25rem;
+  width: 95%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .password-generator {
+    width: 75%;
+  }
 }
 
 .password {
   height: 60px;
-  width: 500px;
+  width: 100%;
   margin-bottom: 1rem;
   border: none;
   outline: none;
@@ -39,17 +49,23 @@ body {
   background-color: var(--primary-color);
   box-shadow: 0 4px 4px var(--primary-shadow);
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   font-family: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .password {
+    font-size: 1.25rem;
+  }
 }
 
 .range-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem;
   height: 60px;
-  width: 500px;
+  width: 100%;
+  padding: 1.25rem;
   background-color: var(--primary-color);
   box-shadow: 0 4px 4px var(--primary-shadow);
   border-radius: 0.5rem;
@@ -58,26 +74,25 @@ body {
 }
 
 .range-label {
-  display: inline-block;
+  display: block;
   letter-spacing: 4px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .range-input {
   height: 3px;
-  width: 300px;
+  width: 80%;
   accent-color: var(--accent-color);
 }
 
 .button {
   height: 60px;
-  width: 500px;
+  width: 100%;
   border: none;
   color: inherit;
   background-color: var(--cta-color);
   box-shadow: 0 4px 4px var(--primary-shadow);
   border-radius: 0.5rem;
-  text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 4px;
   cursor: pointer;
